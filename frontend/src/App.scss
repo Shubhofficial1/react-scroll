@@ -1,0 +1,103 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #5372f0;
+}
+
+.wrapper {
+  padding: 35px;
+  position: relative;
+  overflow-x: hidden;
+  max-width: 1000px;
+  background: #fff;
+  border-radius: 13px;
+  .icon {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 120px;
+    display: flex;
+    align-items: center;
+
+    &:first-child {
+      left: 0;
+      display: none;
+      background: linear-gradient(90deg, #fff 70%, transparent);
+    }
+
+    &:last-child {
+      right: 0;
+      justify-content: flex-end;
+      background: linear-gradient(-90deg, #fff 70%, transparent);
+    }
+
+    svg {
+      width: 55px;
+      height: 55px;
+      cursor: pointer;
+      font-size: 1.2rem;
+      text-align: center;
+      line-height: 55px;
+      border-radius: 50%;
+
+      &:hover {
+        background: #efedfb;
+      }
+
+      &:first-child {
+        margin-left: 15px;
+      }
+
+      &:last-child {
+        margin-right: 15px;
+      }
+    }
+  }
+
+  .tabs-box {
+    display: flex;
+    gap: 12px;
+    list-style: none;
+    overflow-x: hidden;
+    // scroll-behavior: smooth;
+
+    .drag {
+      scroll-behavior: auto;
+      cursor: grab;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    .tab {
+      cursor: pointer;
+      font-size: 1.18rem;
+      white-space: nowrap;
+      background: #f5f4fd;
+      padding: 13px 20px;
+      border-radius: 30px;
+      border: 1px solid #d8d5f2;
+      user-select: none;
+      pointer-events: none;
+
+      &:hover {
+        background: #efedfb;
+      }
+    }
+
+    .active {
+      color: #fff;
+      background: #5372f0;
+      border-color: transparent;
+    }
+  }
+}
